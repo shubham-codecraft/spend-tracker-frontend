@@ -2,6 +2,10 @@
 
 React frontend for managing personal expenses. The app provides passwordless sign-in, a monthly dashboard, expense creation, filtering, and a complete expense list.
 
+## Live Demo
+
+[Open the deployed app](https://spend-tracker-frontend-my5a.onrender.com/)
+
 ## Features
 
 - JWT-based authentication
