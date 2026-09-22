@@ -25,6 +25,7 @@ export default function Layout() {
               <NavLink
                 key={l.to}
                 to={l.to}
+                end
                 className={({ isActive }) => `nav__link${isActive ? ' is-active' : ''}`}
               >
                 {l.label}
