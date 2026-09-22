@@ -65,14 +65,18 @@ export default function Dashboard() {
         <div className="grid-2">
           <div className="panel">
             <div className="hero-figure">
-              <span className="hero-figure__amount numeral">
-                {summary.current_month_total.toFixed(2)}
-              </span>
+              <div className="hero-figure__main">
+                <span className="hero-label">Spent this month</span>
+                <span className="hero-figure__amount numeral">
+                  {summary.current_month_total.toFixed(2)}
+                </span>
+              </div>
               <StatDelta value={summary.month_over_month_percent_change} />
             </div>
-            <p className="hero-caption">
-              Spent this month — {summary.total_spend.toFixed(2)} total, {summary.previous_month_total.toFixed(2)} last month
-            </p>
+            <div className="hero-baseline">
+              <span>Previous month</span>
+              <span className="numeral">{summary.previous_month_total.toFixed(2)}</span>
+            </div>
 
             {summary.insights.length > 0 && (
               <ul className="insight-list" style={{ marginTop: 18 }}>

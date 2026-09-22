@@ -16,12 +16,12 @@ export default function ExpenseTable({ expenses, emptyLabel = 'No expenses yet.'
       <tbody>
         {expenses.map((e) => (
           <tr key={e.id ?? `${e.date}-${e.category}-${e.amount}-${e.note}`}>
-            <td>{e.date}</td>
-            <td>
+            <td data-label="date">{e.date}</td>
+            <td data-label="category">
               <span className="category-tag">{e.category}</span>
             </td>
-            <td>{e.note || <span className="hint">—</span>}</td>
-            <td className="amount numeral">{e.amount.toFixed(2)}</td>
+            <td data-label="note">{e.note || <span className="hint">—</span>}</td>
+            <td data-label="amount" className="amount numeral">{e.amount.toFixed(2)}</td>
           </tr>
         ))}
       </tbody>
