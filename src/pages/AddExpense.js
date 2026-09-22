@@ -52,7 +52,7 @@ export default function AddExpense() {
         </div>
       </div>
 
-      <div className="panel" style={{ maxWidth: 480 }}>
+      <div className="panel expense-form-panel" style={{ maxWidth: 480 }}>
         <form onSubmit={handleSubmit}>
           <div className="form-grid">
             <div className="field">

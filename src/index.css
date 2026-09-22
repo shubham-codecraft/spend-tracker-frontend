@@ -127,8 +127,9 @@ select {
 
 .brand {
   display: flex;
-  align-items: baseline;
-  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
   margin-bottom: 40px;
 }
 
@@ -363,6 +364,10 @@ select {
   align-items: center;
 }
 
+.expense-form-panel .form-actions {
+  justify-content: center;
+}
+
 .hint {
   font-size: 0.8rem;
   color: var(--ink-soft);
@@ -594,20 +599,27 @@ select {
   max-width: 420px;
   background: var(--panel);
   border: 1px solid var(--rule);
-  padding: 40px 36px;
+  padding: 28px 32px;
 }
 
 .auth-card .brand {
-  margin-bottom: 28px;
+  align-items: center;
+  margin-bottom: 18px;
 }
 
 .auth-card h1 {
   font-size: 1.9rem;
   margin-bottom: 6px;
+  text-align: center;
 }
 
 .auth-card p.hint {
-  margin-bottom: 22px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.auth-card .form-actions {
+  margin-top: 14px;
 }
 
 .auth-card .field label {
