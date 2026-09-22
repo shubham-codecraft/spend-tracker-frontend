@@ -1,8 +1,4 @@
 // Wrapper around the Spend Tracker backend REST API.
-//
-// Auth: POST /auth/login takes { email, first_name, last_name } and returns
-// the user record and a JWT. The JWT is sent as `Authorization: Bearer` on
-// every protected call.
 
 function buildQuery(filters = {}) {
   const params = new URLSearchParams();
@@ -38,13 +34,22 @@ async function requestJson(res, fallbackMessage) {
   return res.json();
 }
 
-export async function login(apiBase, payload) {
-  const res = await fetch(`${apiBase}/auth/login`, {
+export async function requestOtp(apiBase, payload) {
+  const res = await fetch(`${apiBase}/auth/request-otp`, {
     method: 'POST',
     headers: headers(),
     body: JSON.stringify(payload),
   });
-  return requestJson(res, 'Login failed');
+  return requestJson(res, 'Could not send verification code');
+}
+
+export async function verifyOtp(apiBase, payload) {
+  const res = await fetch(`${apiBase}/auth/verify-otp`, {
+    method: 'POST',
+    headers: headers(),
+    body: JSON.stringify(payload),
+  });
+  return requestJson(res, 'Verification failed');
 }
 
 export async function fetchExpenses(apiBase, token, filters) {
