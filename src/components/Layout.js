@@ -49,8 +49,6 @@ export default function Layout() {
       <main className="content">
         <Outlet />
       </main>
-
-      {settingsOpen && <SettingsPanel onClose={() => setSettingsOpen(false)} />}
     </div>
   );
 }
