@@ -53,6 +53,8 @@ The app opens at [http://localhost:3000](http://localhost:3000).
 
 The backend URL can also be updated while the app is running from **API settings** in the sidebar. It is stored in `localStorage` for that browser only.
 
+The app uses hash-based routing for static hosting compatibility. Production URLs therefore use the format `https://your-domain.com/#/login` and can be refreshed safely without server-side rewrite configuration.
+
 ## Routes
 
 | Route | Description |
