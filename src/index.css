@@ -585,12 +585,6 @@ select {
   margin-top: 14px;
 }
 
-.auth-back {
-  display: block;
-  margin: 14px auto 0;
-  text-align: center;
-}
-
 .auth-card .field label {
   font-size: 0.82rem;
 }

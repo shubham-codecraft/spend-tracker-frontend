@@ -34,22 +34,13 @@ async function requestJson(res, fallbackMessage) {
   return res.json();
 }
 
-export async function requestOtp(apiBase, payload) {
-  const res = await fetch(`${apiBase}/auth/request-otp`, {
+export async function login(apiBase, payload) {
+  const res = await fetch(`${apiBase}/auth/login`, {
     method: 'POST',
     headers: headers(),
     body: JSON.stringify(payload),
   });
-  return requestJson(res, 'Could not send verification code');
-}
-
-export async function verifyOtp(apiBase, payload) {
-  const res = await fetch(`${apiBase}/auth/verify-otp`, {
-    method: 'POST',
-    headers: headers(),
-    body: JSON.stringify(payload),
-  });
-  return requestJson(res, 'Verification failed');
+  return requestJson(res, 'Login failed');
 }
 
 export async function fetchExpenses(apiBase, token, filters) {
