@@ -1,47 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 :root {
-  --paper: #F6F1E8;
-  --panel: #FBF8F2;
-  --ink: #1E1A15;
-  --ink-soft: #8B8071;
-  --rule: #DAD2C0;
-  --rule-strong: #C9BFA9;
-  --accent: #2E4A34;
-  --accent-soft: #E4E9E0;
-  --brick: #9B3B2B;
-  --brick-soft: #F3E4DF;
+  --paper: #f6f4ee;
+  --panel: #ffffff;
+  --ink: #161a20;
+  --ink-soft: #565c64;
+  --rule: #e2ded2;
+  --rule-strong: #cdc8b8;
+  --accent: #1f6f5c;
+  --accent-soft: #e4efe9;
+  --brick: #a8402f;
+  --brick-soft: #f4e6e1;
   --focus: var(--accent);
   --font-display: 'Fraunces', serif;
   --font-mono: 'IBM Plex Mono', monospace;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #16140F;
-    --panel: #1C1914;
-    --ink: #EDE7DA;
-    --ink-soft: #948A78;
-    --rule: #332E25;
-    --rule-strong: #433D30;
-    --accent: #7FA383;
-    --accent-soft: #23281F;
-    --brick: #C97A67;
-    --brick-soft: #2B1D18;
-  }
-}
-
-[data-theme='dark'] {
-  --paper: #16140F;
-  --panel: #1C1914;
-  --ink: #EDE7DA;
-  --ink-soft: #948A78;
-  --rule: #332E25;
-  --rule-strong: #433D30;
-  --accent: #7FA383;
-  --accent-soft: #23281F;
-  --brick: #C97A67;
-  --brick-soft: #2B1D18;
 }
 
 * {
